@@ -38,6 +38,7 @@ button {
 
 input[type='text'] {
     width: 300px;
+    outline: none;
 }
 
 
@@ -57,12 +58,56 @@ input[type='text'] {
     border-bottom-right-radius: 4px;
 }
 
-@media (max-width:800px) {}
 
-@media (max-width:700px) {}
+.meals {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
+}
 
-@media (max-width:500px) {
-    input[type='text']{
+
+.meal {
+    width: 180px;
+    height: 180px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+
+.meal img {
+    width: 100%;
+    height: 100%;
+    border: 4px white solid;
+    border-radius: 2px;
+}
+
+.meal-info {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity .2s ease-in;
+    opacity: 0;
+}
+
+.meal:hover .meal-info {
+    opacity: 1;
+}
+
+@media (max-width: 800px) {
+}
+
+@media (max-width: 700px) {
+}
+
+@media (max-width: 500px) {
+    input[type='text'] {
         width: 100%;
     }
 }
